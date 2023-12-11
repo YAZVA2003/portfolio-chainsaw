@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+
+body {
+    width: 2031px;
+    height: 4200px;
+    background: #687680;
+}
+
+header {
+    display: flex;
+    padding: 25px 151px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-shrink: 0;
+    
+}
+.header-icons {
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 53px;
+    flex-shrink: 0;
+}
+.header-menu {
+    display: flex;
+    width: 322px;
+    height: 19px;
+    flex-shrink: 0;
+}
+.header-menu > span {
+    color: #000;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 99px;
+    height: 19px;
+    flex-shrink: 0;
+}
+.content-left {
+    width: 586px;
+    height: 1057px;
+    flex-shrink: 0;
+    stroke-width: 15px;
+    stroke: rgba(128, 208, 199, 0.53);
+    color: #FFF;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 27.2px */
+}
+.hello-text {
+    color: #E9CBBA;
+    font-family: Playfair Display;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 382px;
+    height: 86px;
+    flex-shrink: 0;
+}
+.order-button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset; 
+    border-radius: 20px;
+    width: 168px;
+    height: 35px;
+    flex-shrink: 0;
+    background: url(/img/order-button.svg) #E9CBBA;
+}
+.content-right {
+    width: 493px;
+    height: 1268px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 27.2px */
+    border-radius: 966px;
+    background: linear-gradient(179deg, #0093E9 21.85%, rgba(128, 208, 199, 0.00) 74.46%);
+}
+.headline {
+    color: #FFF;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 2.8px;
+    width: 125px;
+    height: 19px;
+    flex-shrink: 0;
+}
+.my-works {
+    display: inline-flex;
+    width: 1213px;
+    height: 277.375px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    stroke-width: 15px;
+    stroke: rgba(128, 208, 199, 0.53);
+    background-color: #000000, #00000000,#80D0C787;
+}
+.order-photosession {
+    color: #FFF;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+    display: flex;
+    width: 1368.29px;
+    justify-content: center;
+    align-items: flex-end;
+    align-self: stretch;
+    align-content: stretch;
+    gap: 0px 319px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.date  {
+    width: 477.29px;
+    height: 56px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #686868;
+}
+footer {
+    width: 2110px;
+    height: 831px;
+    flex-shrink: 0;
+    fill: linear-gradient(355deg, rgba(128, 208, 199, 0.53) 43.54%, rgba(128, 208, 199, 0.00) 88.89%); 
+}
+.reviews {
+    display: inline-flex;
+    padding: 555px 1768.5px 0px 0px;
+    align-items: center;
+}

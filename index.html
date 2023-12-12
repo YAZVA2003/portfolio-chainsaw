@@ -1,78 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photograph</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="header-icons">
-            <img src="/img/fb.svg" alt="fb">
-            <img src="/img/pl.svg" alt="linkl">
-            <img src="/img/inst.svg" alt="instagram">
-            <img src="/img/vk.svg" alt="vk">
-        </div>
-        <div class="header-menu">
-            <span>Обо мне</span>
-            <span>Работы</span>
-            <span>Контакты</span>
-            <img src="/img/contact.svg" alt="header-icon">
-        </div>
-    </header>
-    <main>
-        <div class="content-left">
-            <img src="/img/dots.svg" alt="dots">
-            <img src="/img/IMG_2img_2.svg" alt="about me">
-            <h1 class="hello-text">Привет</h1>
-            <h6 class="headline">Я ФОТОГРАФ</h6>
-            <p>Сайт рыбатекст поможет дизайнеру, верстальщику,<br>
-                вебмастеру сгенерировать несколько абзацев более менее<br>
-                 осмысленного текста рыбы на русском языке,<br>
-                  а начинающему оратору отточить навык публичных выступлений в домашних условиях.<br> 
-                  При создании генератора мы использовали небезизвестный<br>
-                    универсальный код речей. Текст генерируется абзацами<br>
-                     случайным образом от двух до десяти предложений в<br>
-                      абзаце, что позволяет сделать текст более привлекательным<br>
-                       и живым для визуально-слухового восприятия.</p>
-            <button class="order-button"></button>           
-        </div>
-        <div class="content-right">
-            <img src="/img/IMG_1mf.svg" alt="MF">
-            <h1 class="hello-text">Привет</h1>
-            <h6 >12 лет опыта</h6>
-            <p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании форм развития.<br>
-                 Не следует, однако забывать, что дальнейшее развитие различных форм деятельности позволяет оценить значение новых предложений.<br> 
-                Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует насущным потребностям.<br>
-                 Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности требуют определения и уточнения модели развития.</p>
-        </div>
-        <div class="my-works">
-            <h1 class="hello-text">Мои работы</h1>
-            <img src="/img/Rectangle 10.svg" alt="I">
-            <img src="/img/dots.svg" alt="dots">
-            <img src="/img/Rectangle 11.svg" alt="III">
-            <img src="/img/Rectangle 13.svg" alt="IV">
-        </div>
-        <div class="order-photosession">
-            <img src="/img/Rectangle 12.svg" alt="II">
-            <h1 class="hello-text">Заказать фотосессию</h1>
-            <form action="/echo" method="get">
-                <label for="date" id="datetime-field" class="date">ДАТА</label><br>
-                <input type="datetime" id="datetime-field" class="date"><br>
-                <label for="telephone-field">Телефон</label><br>
-                <input type="number" id="telephone-field" class="date"><br>
-                <label for="login-field" class="date">Имя</label><br>
-                <input type="text" id="login-field" class="date">
-            </form>
-            <button class="order-button"></button>
-        </div>
-    </main>
-    <footer>
-        <div class="reviews">
-            <img src="/img/reviews-footer.svg" alt="reviews-footer">
-        </div>
-    </footer>
-</body>
-</html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Портфолио</title>
+        <link rel="stylesheet" href="style.css" type='text/css'>
+        <link rel="canonical" href="https://fonts.google.com/specimen/Comfortaa"/>
+        <link id="app-css" rel="preconnect" href="https://fonts.gstatic.com" nonce="kkdYFZ2aypisnhU5bdE1-w">            
+        <style>
+                .navbar {
+                  overflow: hidden;
+                  background-color: #333;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                
+                .navbar a {
+                  float: left;
+                  font-size: 16px;
+                  color: white;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                }
+                
+                .dropdown {
+                  float: left;
+                  overflow: hidden;
+                  position: relative;
+                }
+                
+                .dropdown .dropbtn {
+                  font-size: 16px;  
+                  border: none;
+                  outline: none;
+                  color: white;
+                  padding: 14px 16px;
+                  background-color: inherit;
+                  font-family: inherit;
+                  margin: 0;
+                }
+                
+                .navbar a:hover, .dropdown:hover .dropbtn {
+                  background-color: red;
+                }
+                
+                .dropdown-content {
+                  display: none;
+                  position: absolute;
+                  background-color: #f9f9f9;
+                  min-width: 160px;
+                  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                  z-index: 1;
+                }
+                
+                .dropdown-content a {
+                  float: none;
+                  color: black;
+                  padding: 12px 16px;
+                  text-decoration: none;
+                  display: block;
+                  text-align: left;
+                }
+                
+                .dropdown-content a:hover {
+                  background-color: #ddd;
+                }
+                
+                .dropdown:hover .dropdown-content {
+                  display: block;
+                }
+                .dropbtn {
+                    background-color: #3e8e41;
+                    color: white;
+                    padding: 16px;
+                    font-size: 16px;
+                    border: none;
+                }
+                </style>
+    </head>
+    <body>
+        <header>
+            <div style="padding-top: 41px; padding-bottom: 27px; background: white; border-radius: 30px; overflow: hidden; justify-content: center; align-items: center; display: inline-flex">
+                <div id="#services" style="width: 905px; height: 29px; text-align: center; color: black; font-size: 18px; font-family: Comfortaa; font-weight: 700; line-height: 27px; word-wrap: break-word">The PORTFOLIO</div>
+            </div>
+                <div id="#Search" style="width: 100%; color: #666666; font-size: 16px; font-family: Comfortaa; font-weight: 400; word-wrap: break-word">
+                    <input class="search" id="#input">
+                </div>
+            <div class="container">
+                <div class="sub-menu">
+                    <div id="#contacts" style="position: relative; box-shadow: 25px 4px 4px rgba(0, 0, 0, 0.25) inset">
+                        <div style="width: 248px; height: 56px; left: 0px; top: 0px; position: absolute; border-radius: 4px; border: 2px #DC7373 solid">
+                            <a class="content-gradient" href=https://www.youtube.com/channel/UCkkSS4su6ffMTb1AEJhnXgA><img src=Vector.svg alt="Youtube"></a>
+                        </div>
+                    </div>    
+                </div>                   
+                    <div class="active">
+                        <div style="text-align: center; color: #DC7373; font-size: 16px; font-family: Comfortaa; font-weight: 700; line-height: 24px; word-wrap: break-word">
+                            <a href="https://soundcloud.com/discover">Soundcloud</a>
+                        </div>
+                    </div>
+            </div>
+        </header>     
+            <div class="content-bg">
+                <p>Во-первых, функция, созданная с помощью class, помечена специальным внутренним свойством <b>[[IsClassConstructor]]: true.</b><br>
+                Поэтому это не совсем то же самое, что создавать её вручную. В отличие от обычных функций, конструктор класса не может быть вызван без new.<br>
+                Методы класса являются неперечислимыми. Определение класса устанавливает флаг <b>enumerable</b> в false для всех методов в <b>"prototype".</b><br>
+                И это хорошо, так как если мы проходимся циклом <b>for..in</b> по объекту, то обычно мы не хотим при этом получать методы класса.<br>
+                Классы всегда используют <b>use strict.</b> Весь код внутри класса автоматически находится в строгом режиме.<br>
+                Также в дополнение к основной, описанной выше, функциональности, синтаксис <b>class</b> даёт ряд других интересных возможностей.</p>   
+            </div>  
+            <div class="content-white">
+                    <p>Методы в классе не разделяются запятой<br>
+                    Частая ошибка начинающих разработчиков – ставить запятую между методами класса, что приводит к синтаксической ошибке.<br> 
+                    Синтаксис классов отличается от литералов объектов, не путайте их. Внутри классов запятые не требуются.</p><br>
+                    У этого способа есть один очень серьезный недостаток. Обратите внимание, что в исходном HTML блок "sidebar" идет до блока "content" с основным содержимым.<br>
+                    Не нужно думать, что так сделано случайно. Так сделано специально, потому что иначе этот самый способ с наложением колонки поверх margin'а не работал бы.
+            </div>
+                <h1>Выпадающая кнопка</h1>
+                <div class="navbar">
+                  <a href="#">Главная</a>
+                  <a href="#">Новости</a>
+                  <div class="dropdown">
+                    <button class="dropbtn"> 
+                      <i class="fa fa-caret-down">Еще</i>
+                    </button>
+                    <div class="dropdown-content">                
+                        <div class="cont-row-4">
+                            <div class="row-1"><a href="#">Ссылка row-1</a></div>
+                            <div class="row-2"><a href="#">Ссылка row-2</a></div>
+                            <div class="row-3"><a href="#">Ссылка row-3</a></div>
+                            <div class="row-4"><a href="#">Ссылка row-4</a></div>
+                        </div>
+                    </div>
+                  </div> 
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Content</button>
+                    <div class="cont-row-1">
+                        <div class="row-1">row-1</div>
+                        <div class="row-2">row-2</div>
+                        <div class="row-3">row-3</div>
+                        <div class="row-4">row-4</div>
+                    </div>
+                </div>
+                  <div class="dropdown">
+                    <button class="dropbtn">Dropdown-content</button>
+                    <div class="dropdown-content">
+                    <div class="cont-row-2">
+                        <div class="row-1">row-1</div>
+                        <div class="row-2">row-2</div>
+                        <div class="row-3">row-3</div>
+                        <div class="row-4">row-4</div>
+                    </div> 
+                </div>
+                  </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">         
+                        <div class="cont-row-3">
+                            <div class="row-1">row-1</div>
+                            <div class="row-2">row-2</div>
+                            <div class="row-3">row-3</div>
+                            <div class="row-4">row-4</div>
+                        </div>
+                    </div>
+                </div>
+            <div style="padding: 10px; background: rgba(235.88, 192.63, 192.63, 0.25); justify-content: center; align-items: flex-end; gap: 10px; display: inline-flex">
+                <div style="height: 72px; padding-top: 24px; padding-bottom: 24px; border-top: 1px #1F1F1F solid; justify-content: space-between; align-items: center; display: flex">
+                    <div style="justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
+                        <div style="color: #666666; font-size: 14px; font-family: Comfortaa; font-weight: 300; line-height: 24px; word-wrap: break-word">Privacy Policy</div>
+                        <div style="color: #666666; font-size: 14px; font-family: Comfortaa; font-weight: 300; line-height: 24px; word-wrap: break-word">Terms & Conditions</div>
+                        <div style="color: #666666; font-size: 14px; font-family: Comfortaa; font-weight: 300; line-height: 24px; word-wrap: break-word">Cookie Policy</div>
+                    </div>
+                    <div style="color: #666666; font-size: 14px; font-family: Comfortaa; font-weight: 300; line-height: 24px; word-wrap: break-word">Version 1.0</div>
+                    <div style="color: #666666; font-size: 14px; font-family: Comfortaa; font-weight: 300; line-height: 24px; word-wrap: break-word">@2023</div>
+                </div>
+                <div style="width: 904px; height: 291px; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex">
+                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                        <div style="align-self: stretch; color: white; font-size: 16px; font-family: Comfortaa; font-weight: 600; line-height: 24px; word-wrap: break-word">Home</div>
+                        <div style="align-self: stretch; height: 104px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Sora; font-weight: 400; line-height: 21px; word-wrap: break-word">Partners</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                        <div style="align-self: stretch; color: white; font-size: 16px; font-family: Comfortaa; font-weight: 600; line-height: 24px; word-wrap: break-word">Services</div>
+                        <div style="align-self: stretch; height: 177px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Comfortaa; font-weight: 400; line-height: 21px; word-wrap: break-word">Web Design</div>
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Comfortaa; font-weight: 400; line-height: 21px; word-wrap: break-word">Website Development</div>
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Comfortaa; font-weight: 400; line-height: 21px; word-wrap: break-word">App Development</div>
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Comfortaa; font-weight: 400; line-height: 21px; word-wrap: break-word">Digital Marketing</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                        <div style="align-self: stretch; color: white; font-size: 16px; font-family: Comfortaa; font-weight: 600; line-height: 24px; word-wrap: break-word">Projects</div>
+                        <div style="align-self: stretch; height: 229px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                        <div style="align-self: stretch; color: white; font-size: 16px; font-family: Comfortaa; font-weight: 600; line-height: 24px; word-wrap: break-word">About Us</div>
+                        <div style="align-self: stretch; height: 83px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Sora; font-weight: 400; line-height: 21px; word-wrap: break-word">Team</div>
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Sora; font-weight: 400; line-height: 21px; word-wrap: break-word">Achievements</div>
+                            <div style="align-self: stretch; color: #808080; font-size: 14px; font-family: Sora; font-weight: 400; line-height: 21px; word-wrap: break-word">Awards</div>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: inline-flex">
+                        <div style="width: 104px; height: 44px; background: #D9D9D9"></div>
+                        <div style="align-self: stretch; color: white; font-size: 16px; font-family: Comfortaa; font-weight: 600; line-height: 24px; word-wrap: break-word">Blogs</div>
+                    </div>
+                </div>
+            </div>   
+    </body>
+</html> 

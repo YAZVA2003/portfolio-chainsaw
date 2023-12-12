@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-Compatable" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./script.js" defer></script>
+        <title>DOC</title>
+        <style>
+            .invalid { border-color: red; }
+            .onclick { 
+                color: red; 
+            }
+            body {
+                padding: 10px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                line-height: 1.4;
+            }
+            .main-menu {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 0;
+                margin: 0;
+                list-style: none;
+            }
+            .main-menu li {
+                margin: 8px;
+            }
+            .main-menu a {
+                color: #0088CC;
+                padding: 8px 14px;
+                display:block;
+                text-decoration: none;
+            }
+            .main-menu a:hover {
+                background :#F5F5F5;
+            }
+
+            .main-menu > .active > a {
+                color: white;
+                background: #0088CC;
+            }
+            .main-menu ul {
+                margin: 0;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 30px;
+                padding-right: 0;
+                list-style: none;
+            }
+            .container {
+                border: 1px solid #E5E5E5;
+                padding: 10px 15px;
+                width: 150px;
+                background-color: #F5F5F5;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="browser">
+                <h1>Браузерное окружение</h1><br>
+                 <p class="par">Язык JavaScript изначально был создан для веб-браузеров. Но с тех пор он значительно эволюционировал и превратился в кроссплатформенный язык программирования для решения широкого круга задач.<br>
+                Сегодня JavaScript может использоваться в браузере, на веб-сервере или в какой-то другой среде, даже в кофеварке. Каждая среда предоставляет свою функциональность, которую спецификация JavaScript называет окружением.<br>
+                Окружение предоставляет свои объекты и дополнительные функции, в дополнение базовым языковым. Браузеры, например, дают средства для управления веб-страницами. Node.js делает доступными какие-то серверные возможности и так далее.
+                </p>
+            </div>
+            <div class="browser">
+                <h2>Javascript: Браузерное окружение, спецификации</h2>
+                <p class="par">Document Object Model, сокращённо DOM – объектная модель документа, которая представляет все содержимое страницы в виде объектов, которые можно менять.<br>
+                Объект document – основная «входная точка». С его помощью мы можем что-то создавать или менять на странице.<br>
+                Спецификация DOM описывает структуру документа и предоставляет объекты для манипуляций со страницей. Существуют и другие, отличные от браузеров, инструменты, использующие DOM.<br>
+                Например, серверные скрипты, которые загружают и обрабатывают HTML-страницы, также могут использовать DOM. При этом они могут поддерживать спецификацию не полностью.<br>
+                Правила стилей CSS структурированы иначе чем HTML. Для них есть отдельная спецификация CSSOM, которая объясняет, как стили должны представляться в виде объектов, как их читать и писать.<br>
+                CSSOM используется вместе с DOM при изменении стилей документа. В реальности CSSOM требуется редко, обычно правила CSS статичны. Мы редко добавляем/удаляем стили из JavaScript, но и это возможно.
+                </p>
+            </div>
+            <div class="browser" >
+                <h3><button onclick="alert(this.innerHTML)" name="q" value="test">Нажми меня</button></h3>
+                    <p class="par"><i>Событие</i> – это сигнал от браузера о том, что что-то произошло. Все DOM-узлы подают такие сигналы (хотя события бывают и не только в DOM).<br>
+                        <ol class="num">Вот список самых часто используемых DOM-событий:<br>
+                            <li><strong>События мыши:</strong><br>    
+                                <ul class="main-menu">
+                                    <li><u>click</u> – происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).</li><br>
+                                    <li><u>contextmenu</u> – происходит, когда кликнули на элемент правой кнопкой мыши.</li><br>
+                                    <li><u>mouseover / mouseout</u> – когда мышь наводится на / покидает элемент.</li><br>
+                                    <li><u>mousedown / mouseup</u> – когда нажали / отжали кнопку мыши на элементе.</li><br>
+                                    <li><u>mousemove</u> – при движении мыши.</li>
+                                </ul><br>
+                            </li>
+                                <li>
+                                    <ul class="main-menu"><strong>События на элементах управления:</strong><br>
+                                        <li><i>submit</i> – пользователь отправил форму <i>form</i>.</li>
+                                        <li><i>focus</i> – пользователь фокусируется на элементе, например нажимает на <i>input</i>.</li>
+                                    </ul>
+                                </li>
+                            <li>
+                                <ul class="main-menu"><strong>Клавиатурные события:</strong><br>
+                                        <li>keydown и keyup – когда пользователь нажимает / отпускает клавишу.</li>
+                                        <li>События документа:<br>
+                                            DOMContentLoaded – когда HTML загружен и обработан, DOM документа полностью построен и доступен.</li>
+                                        <li>CSS events:<br>
+                                            transitionend – когда CSS-анимация завершена.
+                                        </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </p>
+                    <div class="container">   
+                        <p class="par">Обратите внимание, для содержимого атрибута <strong>onclick</strong> используются одинарные кавычки, так как сам атрибут находится в двойных. Если мы забудем об этом и поставим двойные кавычки внутри атрибута, вот так: <strong>onclick="alert("Click!")"</strong>, код не будет работать.
+                        <strong>Атрибут HTML-тега</strong> – не самое удобное место для написания большого количества кода, поэтому лучше создать отдельную JavaScript-функцию и вызвать её там.
+                        <input id="elem" onclick="alert('Перейти на Wikipedia?')" type="button" value="Нажми меня!">
+                        </p>
+                        <ul class="main-menu">
+                            <li><a href="#company" class="block1">О компании</a></li>
+                            <li><a href="#services" class="block2">Услуги</a></li>
+                            <select onchange="alert(this.value)">
+                                <option value="1"><a href="#creator">Разработка</a></li>
+                                <option value="2"><a href="#action">Продвижение</a></li>
+                                <option value="3"><a href="#text">Контекст</a></li>
+                            </select>
+                            <li><a href="#team" class="block3">Сотрудники</a></li>
+                            <li><a href="#contacts" class="block4">Контакты</a></li>
+                        </ul>
+                    </div> 
+            </div>
+    </body>
+</html>

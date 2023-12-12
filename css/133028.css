@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 280px;
+    min-height: 280px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    background: #ecf0f1;
+}
+.main-menu {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #2C3E50;
+}
+.main-menu > li > a {
+    display: block;
+    padding: 10px 15px 10px 15px;
+	border-top: 2px solid #2C3E50;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.main-menu li a {
+    background-color: #2980B9;
+    list-style: none;
+}
+.main-menu > .active > a {
+    border-bottom: 2px solid #2C3E50;
+    border-top: none;
+    background-color: #1ABC9C;
+}
+.active li > a {
+    background-color: #FFFFFF;
+    color: #2980B9;
+    margin: -25px;
+}
+.main-menu .active ul li a {
+    list-style: none;
+    line-height: 2.5; 
+}
